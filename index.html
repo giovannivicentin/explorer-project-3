@@ -1,101 +1,106 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create your event</title>
+    <title>Exlorer Stage 3</title>
 
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <h1>Crie e compartilhe seu evento.</h1>
       <p>O primeiro passo, é preencher esse formulário de inscrição.</p>
     </header>
-    <form action="">
-      <div class="content">
-        <div class="event-information">
-          <h2>Event Informations</h2>
+
+    <main>
+      <form action="">
+        <div class="wrapper">
+          <h2>Informações do Evento</h2>
 
           <div class="line"></div>
 
-          <div class="input-group">
-            <label for="title">Title of event</label>
-            <input type="text" name="title" id="title" />
-          </div>
+          <label for="title"
+            >Título do evento <span>(mínimo 8 caracteres)</span></label
+          >
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Title of event"
+          />
 
-          <div class="input-group">
-            <label for="link">Link of event </label>
-            <input type="url" name="link" id="link" />
-          </div>
+          <label for="url"
+            >link do evento <span>(comece com https://)</span></label
+          >
+          <input type="url" name="url" id="url" />
 
-          <div class="input-group">
-            <label for="phone">Phone number</label>
-            <input type="number" name="phone" id="phone" />
-          </div>
+          <label for="phone"
+            >Whatsapp para contato <span>(somente números)</span></label
+          >
+          <input type="number" name="phone" id="phone" />
 
-          <div class="input-group">
-            <label for="extra-information">
-              Extra information
-              <textarea name="information" id="information"></textarea>
-            </label>
-          </div>
+          <label for="extra-information">Extra information</label>
+          <textarea name="extra" id="extra"></textarea>
 
-          <div class="input-group">
-            <label for="category">Category</label>
-            <select name="category" id="category">
-              <option value="1">Category 1</option>
-              <option value="2">Category 2</option>
-              <option value="3">Category 3</option>
-            </select>
-          </div>
-        </div>
-        <div class="event-privacy">
+          <label for="category">Categoria</label>
+          <select name="category" id="category">
+            <option value="1">Categoria 1</option>
+            <option value="2">Categoria 2</option>
+            <option value="3">Categoria 3</option>
+            <option value="4">Categoria 4</option>
+          </select>
+
           <h2>Privacy</h2>
-
           <div class="line"></div>
 
-          <div class="input-group">
-            <label for="admin-email">E-mail of administrator</label>
-            <input type="text" name="admin-email" id="admin-email" />
-          </div>
+          <label for="email"
+            >E-mail <span>(digite um email válido)</span></label
+          >
+          <input type="email" name="email" id="email" />
 
-          <div class="input-group">
-            <label for="password">Password for Participants</label>
-            <input type="password" name="password" id="password" />
-          </div>
+          <label for="password"
+            >Password <span>(mínimo 8 caracteres)</span></label
+          >
+          <input type="password" name="password" id="password" />
 
-          <div class="input-group">
+          <div class="checkbox-container">
             <input type="checkbox" name="checkbox" id="checkbox" />
-            <label for="checkbox">private event</label>
+            <label for="checkbox">Eu aceito os termos de uso</label>
           </div>
-        </div>
-        <div class="time">
-          <h2>Date and hour</h2>
 
+          <h2>Dia e hora</h2>
           <div class="line"></div>
 
-          <div class="date-box">
-            <div class="input-group">
-              <label for="data">Data</label>
-              <input type="date" name="data" id="data" />
+          <div class="date-container">
+            <div class="date-params">
+              <label for="day">Day</label>
+              <input type="date" name="day" id="day" />
             </div>
 
-            <div class="input-group">
-              <label for="start-time">From</label>
-              <input type="time" name="start-time" id="start-time" />
+            <div class="date-params">
+              <label for="start">From</label>
+              <input type="time" name="start" id="start" />
             </div>
 
-            <div class="input-group">
-              <label for="end-time">To</label>
-              <input type="time" name="end-time" id="end-time" />
+            <div class="date-params">
+              <label for="duration">To</label>
+              <input type="time" name="end" id="end" />
             </div>
           </div>
         </div>
-      </div>
-      <div class="send">
-        <input type="submit" value="submit" />
-      </div>
-    </form>
+
+        <div class="down">
+          <input type="submit" value="save" />
+        </div>
+      </form>
+    </main>
   </body>
 </html>
